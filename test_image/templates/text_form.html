@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Blue_green_color_gradient.svg/2048px-Blue_green_color_gradient.svg.png");
+  /* background: rgb(25,212,214);
+  background: linear-gradient(0deg, rgba(25,212,214,1) 60%, rgba(71,245,122,1) 100%);
+   */
+}
+.content {
+  font-size: 72px;
+  max-width: 500px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+input[type="text"] {
+  width: 600px;
+  font-size: 32px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  background-color: rgb(169, 1, 1);
+}
+input[type=submit]
+{
+  background-color: rgb(255, 255, 255);
+  border: rgb(255, 255, 255);
+  padding: auto;
+  width: 200px;
+  height: 50px;
+
+}
+
+</style>
+<body><center>
+<div class="content"><div class="vertical-center">
+<form action="success" method="post">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" value="Submit">
+</form>
+</center>
+</body>
+</div></div>
+</html>
